@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Delivery Scheduling Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Train Delivery Scheduling Platform</h1>
+    </header>
+
+    <!-- Train Tracking Section -->
+    <section id="tracking">
+        <h2>Real-Time Train Tracking</h2>
+        <div id="train-status">Train Location: <span id="train-location">Fetching...</span></div>
+    </section>
+
+    <!-- Order Pre-Booking Section -->
+    <section id="pre-booking">
+        <h2>Pre-Booking Order System</h2>
+        <form id="order-form">
+            <label for="trainNumber">Train Number:</label>
+            <input type="text" id="trainNumber" name="trainNumber" required>
+
+            <label for="station">Station:</label>
+            <input type="text" id="station" name="station" required>
+
+            <label for="orderTime">Order Time:</label>
+            <input type="datetime-local" id="orderTime" name="orderTime" required>
+
+            <label for="coach">Coach Number:</label>
+            <input type="text" id="coach" name="coach" required>
+
+            <label for="seat">Seat Number:</label>
+            <input type="text" id="seat" name="seat" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <div id="order-status"></div>
+    </section>
+
+    <!-- Additional Features Section -->
+    <section id="additional-features">
+        <h2>Additional Features</h2>
+        <button onclick="openLightbox('advanceOrder')">Advance Orders</button>
+        <button onclick="openLightbox('onTrainVendors')">On-Train Vendors</button>
+        <button onclick="openLightbox('collabRestaurants')">Collaborate with Local Restaurants</button>
+        <button onclick="openLightbox('smartPackaging')">Smart Packaging</button>
+        <button onclick="openLightbox('snackBox')">Order Snack Box</button>
+        <button onclick="openLightbox('doorToDoor')">Door-to-Door Delivery</button>
+        <button onclick="openLightbox('preDeterminedPoints')">Pre-Determined Delivery Points</button>
+        <button onclick="openLightbox('supplierPartnerships')">Supplier Partnerships</button>
+        <button onclick="openLightbox('centralizedDistribution')">Centralized Distribution Centers</button>
+    </section>
+
+    <!-- Lightboxes -->
+    <div id="lightbox" class="lightbox">
+        <div id="lightbox-content" class="lightbox-content">
+            <span class="close-btn" onclick="closeLightbox()">×</span>
+            <div id="lightbox-text"></div>
+        </div>
+    </div>
+
+    <!-- Delivery Updates Section -->
+    <section id="delivery-updates">
+        <h2>Delivery Status Notifications</h2>
+        <div id="notifications">
+            <p>Delivery updates will be shown here.</p>
+        </div>
+    </section>
+
+    <!-- Analyze Train Schedules Section -->
+    <section id="analyze-schedules">
+        <h2>Analyze Train Schedules</h2>
+        <p>We study train schedules to identify peak and non-peak times at various stations based on passenger boarding times, train halts, and traffic patterns.</p>
+        <button onclick="analyzeSchedules()">Analyze Schedules</button>
+        <div id="schedule-analysis"></div>
+    </section>
+
+    <!-- Coordinate with Railways Section -->
+    <section id="coordinate-railways">
+        <h2>Coordinate with Railway Authorities</h2>
+        <p>Collaborate with railway authorities to gain insights into peak hours at specific stations and schedule deliveries during off-peak times.</p>
+        <button onclick="coordinateRailways()">Coordinate with Railways</button>
+        <div id="railway-coordination"></div>
+    </section>
+
+    <!-- Delivery Timetable Section -->
+    <section id="delivery-timetable">
+        <h2>Create Delivery Timetable</h2>
+        <p>Deliveries are aligned with non-peak hours to avoid congestion at distribution points. Slots are assigned for each station and communicated to delivery staff.</p>
+        <button onclick="createTimetable()">Generate Delivery Timetable</button>
+        <div id="timetable"></div>
+    </section>
+
+    <!-- Pilot Runs and Feedback Section -->
+    <section id="pilot-runs">
+        <h2>Pilot Runs and Feedback</h2>
+        <p>Conduct pilot runs to test delivery timings and gather feedback from staff and passengers to refine the schedule.</p>
+        <button onclick="runPilot()">Start Pilot Run</button>
+        <div id="feedback"></div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+</body>
+</html>
